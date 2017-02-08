@@ -1,0 +1,24 @@
+{
+  "name": "dolphin-framework-frontend",
+  "version": "1.0.0",
+  "description": "dolphin front end framework",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiangxiaoqiang/dolphin-framework-frontend.git"
+  },
+  "author": "jiangxiaoqiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiangxiaoqiang/dolphin-framework-frontend/issues"
+  },
+  "homepage": "https://github.com/jiangxiaoqiang/dolphin-framework-frontend#readme"
+}
