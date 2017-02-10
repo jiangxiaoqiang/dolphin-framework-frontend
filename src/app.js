@@ -1,16 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import routes from './routes/';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { createStore } from 'redux'
+import Counter from './components/Counter'
+import counter from './reducers'
 
+const store = createStore(counter)
+const rootEl = document.getElementById('root')
 
-// var func = str => {
-//   console.log(str);
-// };
-//
-// func('我现在在使用Babel!');
-// document.querySelector('#app').innerHTML = 'Hello World!';
+const render = () => ReactDOM.render(
+    <Counter
+        value={store.getState()}
+        onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
+        onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
+    />,
+    rootEl
+)
 
-ReactDOM.render(
-    routes,
-    document.getElementById('root')
-);
+render()
+store.subscribe(render)
